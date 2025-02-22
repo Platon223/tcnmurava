@@ -1,0 +1,18 @@
+{
+  "name": "tsn-murava_bot",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "devStart": "nodemon bot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.66.0"
+  }
+}
