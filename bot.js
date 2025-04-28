@@ -25,10 +25,19 @@ const tsnWords = [
 
 
 bot.on('message', msg => {
+    let isActive = null
     tsnWords.forEach(w => {
         try{
-            if(msg.text.includes(w.text1) && msg.text.includes(w.text2)) {
+            if(msg.text.includes(w.text1) && msg.text.includes(w.text2) && isActive) {
                 bot.sendMessage(msg.chat.id, `Привет, ${msg.from.first_name}! Наши пользователи писали ранее, что зеркало воды находится на уровне 17 метров, поэтому скважину рекомендуется бурить до глубины 28 метров. Удачи!`);
+
+                isActive = false
+
+                setInterval(() => {
+                    isActive = true
+                }, 10000);
+
+                
             }
         } catch(err) {
             console.log(err);
@@ -36,7 +45,6 @@ bot.on('message', msg => {
         
     })
 })
-
 
 
 
