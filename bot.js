@@ -33,7 +33,7 @@ bot.on('message', msg => {
             if(msg.text.includes(w.text1) && msg.text.includes(w.text2) && isActive) {
                 bot.sendMessage(msg.chat.id, `Привет, ${msg.from.first_name}! Наши пользователи писали ранее, что зеркало воды находится на уровне 17 метров, поэтому скважину рекомендуется бурить до глубины 28 метров. Удачи!`);
 
-                isActive = false
+                isActive = false;
 
                 setTimeout(() => {
                     isActive = true
