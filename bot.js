@@ -23,9 +23,11 @@ const tsnWords = [
 
 ];
 
+ let isActive = null
+
 
 bot.on('message', msg => {
-    let isActive = null
+   
     tsnWords.forEach(w => {
         try{
             if(msg.text.includes(w.text1) && msg.text.includes(w.text2) && isActive) {
@@ -33,7 +35,7 @@ bot.on('message', msg => {
 
                 isActive = false
 
-                setInterval(() => {
+                setTimeout(() => {
                     isActive = true
                 }, 10000);
 
