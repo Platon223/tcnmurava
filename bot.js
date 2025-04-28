@@ -23,7 +23,7 @@ const tsnWords = [
 
 ];
 
- let isActive = null
+ let isActive = true;
 
 
 bot.on('message', msg => {
