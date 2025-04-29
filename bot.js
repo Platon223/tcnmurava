@@ -37,7 +37,7 @@ bot.on('message', msg => {
 
                 setTimeout(() => {
                     isActive = true;
-                }, 5000);
+                }, 86400000);
 
                 
             }
