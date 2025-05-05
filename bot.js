@@ -50,6 +50,7 @@ bot.on('message', msg => {
 })
 
 bot.on('new_chat_member', (msg) => {
+    console.log('hello');
     const chatId = msg.chat.id;
   const newMembers = msg.new_chat_members;
 
